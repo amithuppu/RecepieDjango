@@ -1,0 +1,2 @@
+# RecepieDjango
+Django Recepie Project
