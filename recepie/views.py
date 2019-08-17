@@ -40,11 +40,11 @@ class createRecepie(APIView):
                         s1.save()
                     return JsonResponse({'message': 'Recepie created successfully'})
                 except Exception as e:
-                    return JsonResponse({'message': e})
+                    return JsonResponse({'message': 'Exception while creating the recepie'})
             else:
                 return JsonResponse({'message': 'Expected JSON data. Other data found'})
         except Exception as e:
-            return JsonResponse({'message': e})
+            return JsonResponse({'message': 'Exception while parsing'})
 
 
 
@@ -64,7 +64,7 @@ class getRecepiesByUser(APIView):
                 return JsonResponse({'message':'No recepies exist for user or user does not exist'})
             return JsonResponse({'recepies': recepies_list})
         except Exception as e:
-            return JsonResponse({'message': e})
+            return JsonResponse({'message': 'Excpetion while getting the Recepies'})
 
 
 class getallRecepies(APIView):
@@ -78,7 +78,7 @@ class getallRecepies(APIView):
                 recepies_list.append(row.name)
             return JsonResponse({'recepies': recepies_list})
         except Exception as e:
-            return JsonResponse({'message': e})
+            return JsonResponse({'message': 'Exception while getting all recepies'})
 
 
 class deleteRecepie(APIView):
