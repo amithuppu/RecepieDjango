@@ -12,7 +12,7 @@ This Project handles all the CRUD operatios. This project has the following REST
 	                                "ingredients" : ["Oats", "salt","water", "chillies"],
 	                                "steps" : ["Boil water and add Oats", "Add salt", "Mix well and serve"]
                                       }
-      *NOTE: Since no specific data format/input is provided I assumes all the incoming data.
+      *NOTE: Since no specific data format/input is provided I assumed all the incoming data.
  
  2. getallRecepies - Get all the Recepies using GET method
                      Full URL : http://localhost:8000/getallRecepies
